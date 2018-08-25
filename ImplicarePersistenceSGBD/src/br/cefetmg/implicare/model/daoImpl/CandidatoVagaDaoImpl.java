@@ -8,7 +8,7 @@ package br.cefetmg.implicare.model.daoImpl;
 import br.cefetmg.implicare.dao.CandidatoVagaDao;
 import br.cefetmg.implicare.model.domain.CandidatoVaga;
 import br.cefetmg.implicare.model.exception.PersistenceException;
-import br.cefetmg.inf.util.db.JDBCConnectionManager;
+import br.cefetmg.implicare.util.db.JDBCConnectionManager;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;

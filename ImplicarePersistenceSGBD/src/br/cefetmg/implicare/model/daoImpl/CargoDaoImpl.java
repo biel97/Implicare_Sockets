@@ -9,7 +9,7 @@ import br.cefetmg.implicare.dao.CargoDao;
 import br.cefetmg.implicare.model.domain.Cargo;
 import br.cefetmg.implicare.model.domain.CargoAreaEstudo;
 import br.cefetmg.implicare.model.exception.PersistenceException;
-import br.cefetmg.inf.util.db.JDBCConnectionManager;
+import br.cefetmg.implicare.util.db.JDBCConnectionManager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
