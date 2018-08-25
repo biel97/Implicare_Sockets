@@ -9,6 +9,6 @@ package br.cefetmg.implicare.proxy;
  *
  * @author Gabriel
  */
-public class ProxyVaga {
+public class CompetenciaSocketProxy {
     
 }
