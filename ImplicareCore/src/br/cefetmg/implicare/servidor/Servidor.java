@@ -5,6 +5,26 @@
  */
 package br.cefetmg.implicare.servidor;
 
+import br.cefetmg.implicare.proxy.AreaEstudoSocketAdapter;
+import br.cefetmg.implicare.proxy.CandidatoVagaDialogoSocketAdapter;
+import br.cefetmg.implicare.proxy.CandidatoVagaSocketAdapter;
+import br.cefetmg.implicare.proxy.CargoAreaEstudoSocketAdapter;
+import br.cefetmg.implicare.proxy.CargoInteresseSocketAdapter;
+import br.cefetmg.implicare.proxy.CargoSocketAdapter;
+import br.cefetmg.implicare.proxy.CepSocketAdapter;
+import br.cefetmg.implicare.proxy.CidadeSocketAdapter;
+import br.cefetmg.implicare.proxy.CompetenciaPessoaFisicaSocketAdapter;
+import br.cefetmg.implicare.proxy.CompetenciaSocketAdapter;
+import br.cefetmg.implicare.proxy.EmpresaSocketAdapter;
+import br.cefetmg.implicare.proxy.EstadoSocketAdapter;
+import br.cefetmg.implicare.proxy.ExperienciaProfissionalSocketAdapter;
+import br.cefetmg.implicare.proxy.FormacaoAcademicaSocketAdapter;
+import br.cefetmg.implicare.proxy.PessoaFisicaSocketAdapter;
+import br.cefetmg.implicare.proxy.ProficienciaSocketAdapter;
+import br.cefetmg.implicare.proxy.TelefoneSocketAdapter;
+import br.cefetmg.implicare.proxy.UsuarioSocketAdapter;
+import br.cefetmg.implicare.proxy.VagaSocketAdapter;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -17,7 +37,7 @@ public class Servidor {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
         ServerSocket server = null;
         
@@ -28,80 +48,80 @@ public class Servidor {
                 Socket socket = server.accept();
                 
                 AreaEstudoSocketAdapter AreaEstudo = new AreaEstudoSocketAdapter(socket);
-                Thread AreaEstudo = new Thread(AreaEstudo);
-                AreaEstudo.start();
+                Thread Thread1 = new Thread(AreaEstudo);
+                Thread1.start();
                 
                 CandidatoVagaDialogoSocketAdapter CandidatoVagaDialogo = new CandidatoVagaDialogoSocketAdapter(socket);
-                Thread CandidatoVagaDialogo = new Thread(CandidatoVagaDialogo);
-                CandidatoVagaDialogo.start();
+                Thread Thread2 = new Thread(CandidatoVagaDialogo);
+                Thread2.start();
                 
                 CandidatoVagaSocketAdapter CandidatoVaga = new CandidatoVagaSocketAdapter(socket);
-                Thread CandidatoVaga = new Thread(CandidatoVaga);
-                CandidatoVaga.start();
+                Thread Thread3 = new Thread(CandidatoVaga);
+                Thread3.start();
                 
                 CargoAreaEstudoSocketAdapter CargoAreaEstudo = new CargoAreaEstudoSocketAdapter(socket);
-                Thread CargoAreaEstudo = new Thread(CargoAreaEstudo);
-                CargoAreaEstudo.start();
+                Thread Thread4 = new Thread(CargoAreaEstudo);
+                Thread4.start();
                 
                 CargoInteresseSocketAdapter CargoInteresse = new CargoInteresseSocketAdapter(socket);
-                Thread CargoInteresse = new Thread(CargoInteresse);
-                CargoInteresse.start();
+                Thread Thread5 = new Thread(CargoInteresse);
+                Thread5.start();
                 
                 CargoSocketAdapter Cargo = new CargoSocketAdapter(socket);
-                Thread Cargo = new Thread(Cargo);
-                Cargo.start();
+                Thread Thread6 = new Thread(Cargo);
+                Thread6.start();
                 
                 CepSocketAdapter Cep = new CepSocketAdapter(socket);
-                Thread Cep = new Thread(Cep);
-                Cep.start();
+                Thread Thread7 = new Thread(Cep);
+                Thread7.start();
                 
                 CidadeSocketAdapter Cidade = new CidadeSocketAdapter(socket);
-                Thread Cidade = new Thread(Cidade);
-                Cidade.start();
+                Thread Thread8 = new Thread(Cidade);
+                Thread8.start();
                 
                 CompetenciaSocketAdapter Competencia = new CompetenciaSocketAdapter(socket);
-                Thread Competencia = new Thread(Competencia);
-                Competencia.start();
+                Thread Thread9 = new Thread(Competencia);
+                Thread9.start();
                 
-                CompetenciaPessoaFsicaSocketAdapter CompetenciaPessoaFsica = new CompetenciaPessoaFsicaSocketAdapter(socket);
-                Thread CompetenciaPessoaFsica = new Thread(CompetenciaPessoaFsica);
-                CompetenciaPessoaFsica.start();
-                
-                EmpresaSocketAdapter Empresa = new EmpresaSocketAdapter(socket);
-                Thread Empresa = new Thread(Empresa);
-                Empresa.start();
+                CompetenciaPessoaFisicaSocketAdapter CompetenciaPessoaFisica = new CompetenciaPessoaFisicaSocketAdapter(socket);
+                Thread Thread10 = new Thread(CompetenciaPessoaFisica);
+                Thread10.start();
                 
                 EmpresaSocketAdapter Empresa = new EmpresaSocketAdapter(socket);
-                Thread Empresa = new Thread(Empresa);
-                Empresa.start();
+                Thread Thread11 = new Thread(Empresa);
+                Thread11.start();
+                
+                EstadoSocketAdapter Estado = new EstadoSocketAdapter(socket);
+                Thread Thread12 = new Thread(Estado);
+                Thread12.start();
                 
                 ExperienciaProfissionalSocketAdapter ExperienciaProfissional = new ExperienciaProfissionalSocketAdapter(socket);
-                Thread ExperienciaProfissional = new Thread(ExperienciaProfissional);
-                ExperienciaProfissional.start();
+                Thread Thread13 = new Thread(ExperienciaProfissional);
+                Thread13.start();
                 
                 FormacaoAcademicaSocketAdapter FormacaoAcademica = new FormacaoAcademicaSocketAdapter(socket);
-                Thread FormacaoAcademica = new Thread(FormacaoAcademica);
-                FormacaoAcademica.start();
+                Thread Thread14 = new Thread(FormacaoAcademica);
+                Thread14.start();
                 
                 PessoaFisicaSocketAdapter PessoaFisica = new PessoaFisicaSocketAdapter(socket);
-                Thread PessoaFisica = new Thread(PessoaFisica);
-                PessoaFisica.start();
+                Thread Thread15 = new Thread(PessoaFisica);
+                Thread15.start();
                 
                 ProficienciaSocketAdapter Proficiencia = new ProficienciaSocketAdapter(socket);
-                Thread Proficiencia = new Thread(Proficiencia);
-                Proficiencia.start();
+                Thread Thread16 = new Thread(Proficiencia);
+                Thread16.start();
                 
                 TelefoneSocketAdapter Telefone = new TelefoneSocketAdapter(socket);
-                Thread Telefone = new Thread(Telefone);
-                Telefone.start();
+                Thread Thread17 = new Thread(Telefone);
+                Thread17.start();
                 
                 UsuarioSocketAdapter Usuario = new UsuarioSocketAdapter(socket);
-                Thread Usuario = new Thread(Usuario);
-                Usuario.start();
+                Thread Thread18 = new Thread(Usuario);
+                Thread18.start();
                 
                 VagaSocketAdapter Vaga = new VagaSocketAdapter(socket);
-                Thread Vaga = new Thread(Vaga);
-                Vaga.start();
+                Thread Thread19 = new Thread(Vaga);
+                Thread19.start();
             }
         }
         catch(Exception e) {
