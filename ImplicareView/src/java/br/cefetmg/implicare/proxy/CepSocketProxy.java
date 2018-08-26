@@ -5,10 +5,12 @@
  */
 package br.cefetmg.implicare.proxy;
 
+import br.cefetmg.implicare.model.service.CepManagement;
+
 /**
  *
  * @author Gabriel
  */
-public class CepSocketProxy {
+public class CepSocketProxy implements CepManagement {
     
 }

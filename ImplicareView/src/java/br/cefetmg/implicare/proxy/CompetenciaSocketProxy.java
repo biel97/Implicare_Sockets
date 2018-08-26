@@ -5,10 +5,25 @@
  */
 package br.cefetmg.implicare.proxy;
 
+import br.cefetmg.implicare.model.domain.Competencia;
+import br.cefetmg.implicare.model.exception.PersistenceException;
+import br.cefetmg.implicare.model.service.CompetenciaManagement;
+import java.util.List;
+
 /**
  *
  * @author Gabriel
  */
-public class CompetenciaSocketProxy {
+public class CompetenciaSocketProxy implements CompetenciaManagement {
+
+    @Override
+    public List<Competencia> listAll() throws PersistenceException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Competencia getCompetenciaCod(int Cod_Competencia) throws PersistenceException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

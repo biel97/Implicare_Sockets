@@ -11,7 +11,7 @@ import java.net.Socket;
  *
  * @author Gabriel
  */
-public class VagaSocketAdapter implements Runnable {
+public class VagaSocketAdapter implements  Runnable {
 
     public VagaSocketAdapter(Socket socket) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
