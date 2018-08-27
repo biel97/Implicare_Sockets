@@ -125,7 +125,7 @@ public class UsuarioDaoImpl implements UsuarioDao{
     public Usuario getLogin(Long CPF_CNPJ, String Senha) throws PersistenceException {
         try {
             Connection connection = JDBCConnectionManager.getInstance().getConnection();
-
+            //A senha será recebida já criptografada do usuário por razões de segurança, ou assim que é esperado...
             String sql = "SELECT * FROM Usuario WHERE CPF_CNPJ = ? AND Senha = md5(?)";
 
             PreparedStatement ps = connection.prepareStatement(sql);
