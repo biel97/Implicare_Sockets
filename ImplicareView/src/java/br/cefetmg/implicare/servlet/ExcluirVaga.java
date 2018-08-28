@@ -5,7 +5,7 @@
  */
 package br.cefetmg.implicare.servlet;
 
-import br.cefetmg.implicare.model.serviceImpl.VagaManagementImpl;
+import br.cefetmg.implicare.proxy.VagaSocketProxy;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import javax.servlet.http.HttpServletRequest;
@@ -24,8 +24,8 @@ class ExcluirVaga {
             int Cod_Cargo = Integer.parseInt(request.getParameter("Cod_Cargo"));
             SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
             Date Dat_Publicacao = (Date) formato.parse(request.getParameter("Dat_Publicacao"));
-            VagaManagementImpl VagaImpl = new VagaManagementImpl();        
-            boolean Vaga = VagaImpl.delete(CNPJ, Cod_Cargo, Dat_Publicacao);
+            VagaSocketProxy VagaProxy = new VagaSocketProxy();        
+            boolean Vaga = VagaProxy.delete(CNPJ, Cod_Cargo, Dat_Publicacao);
 
             if (Vaga =! false) {
                 jsp="";

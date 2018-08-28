@@ -6,7 +6,7 @@
 package br.cefetmg.implicare.servlet;
 
 import br.cefetmg.implicare.model.domain.Vaga;
-import br.cefetmg.implicare.model.serviceImpl.VagaManagementImpl;
+import br.cefetmg.implicare.proxy.VagaSocketProxy;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +31,7 @@ class InserirVaga {
             String Desc_Vaga = request.getParameter("Desc_Vaga");
             int Status_Vaga = Integer.parseInt(request.getParameter("Status_Vaga"));
             
-            VagaManagementImpl VagaImpl = new VagaManagementImpl();            
+            VagaSocketProxy VagaProxy = new VagaSocketProxy();            
             Vaga Vaga = new Vaga();
             
             Vaga.setCNPJ(CNPJ);
@@ -43,9 +43,9 @@ class InserirVaga {
             Vaga.setDesc_Vaga(Desc_Vaga);
             Vaga.setStatus_Vaga(Status_Vaga);
             
-            VagaImpl.insert(Vaga);
+            VagaProxy.insert(Vaga);
 
-            if (VagaImpl.getVagaCod(CNPJ, Cod_Cargo, Dat_Publicacao) == null) {
+            if (VagaProxy.getVagaCod(CNPJ, Cod_Cargo, Dat_Publicacao) == null) {
                 String Erro = "Erro ao inserir Vaga";
                 jsp="/WEB-Pages/Erro.jsp";
                 request.setAttribute("Erro", Erro);

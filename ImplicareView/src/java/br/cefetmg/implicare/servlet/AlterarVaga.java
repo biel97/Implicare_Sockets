@@ -6,7 +6,7 @@
 package br.cefetmg.implicare.servlet;
 
 import br.cefetmg.implicare.model.domain.Vaga;
-import br.cefetmg.implicare.model.serviceImpl.VagaManagementImpl;
+import br.cefetmg.implicare.proxy.VagaSocketProxy;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +31,7 @@ class AlterarVaga {
             String Desc_Vaga = request.getParameter("Desc_Vaga");
             int Status_Vaga = Integer.parseInt(request.getParameter("Status_Vaga"));
             
-            VagaManagementImpl VagaImpl = new VagaManagementImpl();
+            VagaSocketProxy VagaProxy = new VagaSocketProxy();
             Vaga Vag = new Vaga();
             
             Vag.setCNPJ(CNPJ);
@@ -43,7 +43,7 @@ class AlterarVaga {
             Vag.setDesc_Vaga(Desc_Vaga);
             Vag.setStatus_Vaga(Status_Vaga);
             
-            boolean Vaga = VagaImpl.update(CNPJ, Cod_Cargo, Dat_Publicacao, Vag);
+            boolean Vaga = VagaProxy.update(CNPJ, Cod_Cargo, Dat_Publicacao, Vag);
 
             if (Vaga =! false) {
                 jsp = "";
