@@ -5,7 +5,7 @@
  */
 package br.cefetmg.implicare.model.daoImpl;
 
-import br.cefetmg.implicare.dao.CompetenciaDao;
+import br.cefetmg.implicare.model.dao.CompetenciaDao;
 import br.cefetmg.implicare.model.domain.Competencia;
 import br.cefetmg.implicare.model.exception.PersistenceException;
 import br.cefetmg.implicare.util.db.JDBCConnectionManager;

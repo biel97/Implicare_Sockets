@@ -5,7 +5,7 @@
  */
 package br.cefetmg.implicare.model.daoImpl;
 
-import br.cefetmg.implicare.dao.CargoDao;
+import br.cefetmg.implicare.model.dao.CargoDao;
 import br.cefetmg.implicare.model.domain.Cargo;
 import br.cefetmg.implicare.model.domain.CargoAreaEstudo;
 import br.cefetmg.implicare.model.exception.PersistenceException;
