@@ -58,18 +58,19 @@ public class VagaSocketAdapter implements  Runnable {
                     break;                
                     
                 case "update(CNPJ, Cod_Vaga, Dat_Publicacao)":
-                    
-                    break;
-                    
-                case "updateCandidato(CPF, CNPJ, Cod_Vaga, Dat_Publicacao)":
-                    
+                    Long CNPJ = reader.readLong();
+                    int Cod_Cargo = reader.readInt(); 
+                    Date Dat_Publicacao = (Date) reader.readObject();
+                    Vaga = (Vaga) reader.readObject();
+                    boolean result = VagaMan.update(CNPJ, Cod_Cargo, Dat_Publicacao, Vaga);
+                    writer.writeBoolean(result);
                     break;
                     
                 case "delete(CNPJ, Cod_Cargo, Dat_Publicacao)": 
-                    Long CNPJ = reader.readLong();
-                    int Cod_Cargo = reader.readInt();
-                    Date Dat_Publicacao = (Date) reader.readObject();
-                    boolean result = VagaMan.delete(CNPJ, Cod_Cargo, Dat_Publicacao);
+                    CNPJ = reader.readLong();
+                    Cod_Cargo = reader.readInt();
+                    Dat_Publicacao = (Date) reader.readObject();
+                    result = VagaMan.delete(CNPJ, Cod_Cargo, Dat_Publicacao);
                     writer.writeBoolean(result);
                     break;
                     
