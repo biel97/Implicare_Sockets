@@ -5,7 +5,7 @@
  */
 package br.cefetmg.implicare.model.serviceImpl;
 
-import br.cefetmg.implicare.dao.AreaEstudoDao;
+import br.cefetmg.implicare.model.dao.AreaEstudoDao;
 import br.cefetmg.implicare.model.daoImpl.AreaEstudoDaoImpl;
 import br.cefetmg.implicare.model.domain.AreaEstudo;
 import br.cefetmg.implicare.model.exception.PersistenceException;

@@ -5,7 +5,7 @@
  */
 package br.cefetmg.implicare.model.serviceImpl;
 
-import br.cefetmg.implicare.dao.TelefoneDao;
+import br.cefetmg.implicare.model.dao.TelefoneDao;
 import br.cefetmg.implicare.model.daoImpl.TelefoneDaoImpl;
 import br.cefetmg.implicare.model.domain.Telefone;
 import br.cefetmg.implicare.model.exception.BusinessException;

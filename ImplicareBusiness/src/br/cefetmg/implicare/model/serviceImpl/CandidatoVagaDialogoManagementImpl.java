@@ -5,7 +5,7 @@
  */
 package br.cefetmg.implicare.model.serviceImpl;
 
-import br.cefetmg.implicare.dao.CandidatoVagaDialogoDao;
+import br.cefetmg.implicare.model.dao.CandidatoVagaDialogoDao;
 import br.cefetmg.implicare.model.daoImpl.CandidatoVagaDialogoDaoImpl;
 import br.cefetmg.implicare.model.domain.CandidatoVagaDialogo;
 import br.cefetmg.implicare.model.exception.BusinessException;

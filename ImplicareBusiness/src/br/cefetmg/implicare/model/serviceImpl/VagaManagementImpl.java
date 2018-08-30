@@ -5,7 +5,7 @@
  */
 package br.cefetmg.implicare.model.serviceImpl;
 
-import br.cefetmg.implicare.dao.VagaDao;
+import br.cefetmg.implicare.model.dao.VagaDao;
 import br.cefetmg.implicare.model.daoImpl.VagaDaoImpl;
 import br.cefetmg.implicare.model.domain.CargoInteresse;
 import br.cefetmg.implicare.model.domain.Vaga;

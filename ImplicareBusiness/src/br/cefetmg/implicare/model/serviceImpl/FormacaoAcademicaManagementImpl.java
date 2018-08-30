@@ -5,7 +5,7 @@
  */
 package br.cefetmg.implicare.model.serviceImpl;
 
-import br.cefetmg.implicare.dao.FormacaoAcademicaDao;
+import br.cefetmg.implicare.model.dao.FormacaoAcademicaDao;
 import br.cefetmg.implicare.model.daoImpl.FormacaoAcademicaDaoImpl;
 import br.cefetmg.implicare.model.domain.FormacaoAcademica;
 import br.cefetmg.implicare.model.exception.BusinessException;

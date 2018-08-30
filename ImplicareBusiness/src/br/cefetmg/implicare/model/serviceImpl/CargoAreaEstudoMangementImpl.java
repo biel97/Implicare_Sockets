@@ -5,7 +5,7 @@
  */
 package br.cefetmg.implicare.model.serviceImpl;
 
-import br.cefetmg.implicare.dao.CargoAreaEstudoDao;
+import br.cefetmg.implicare.model.dao.CargoAreaEstudoDao;
 import br.cefetmg.implicare.model.daoImpl.CargoAreaEstudoDaoImpl;
 import br.cefetmg.implicare.model.domain.CargoAreaEstudo;
 import br.cefetmg.implicare.model.domain.FormacaoAcademica;
