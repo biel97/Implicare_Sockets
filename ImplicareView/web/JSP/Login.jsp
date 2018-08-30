@@ -12,5 +12,6 @@
         <title>Login Implicare</title>
     </head>
     <body>
+        <a><button type="Button">CADASTRAR</button></a>
     </body>
 </html>
