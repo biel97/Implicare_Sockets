@@ -82,12 +82,12 @@ public class UsuarioSocketAdapter implements Runnable {
             writer.flush();
             
         } catch (IOException | ClassNotFoundException ex) {
-            Logger.getLogger(VagaSocketAdapter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuarioSocketAdapter.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex.getMessage());
         } catch (BusinessException ex) {
-            Logger.getLogger(VagaSocketAdapter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuarioSocketAdapter.class.getName()).log(Level.SEVERE, null, ex);
         } catch (PersistenceException ex) {
-            Logger.getLogger(VagaSocketAdapter.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuarioSocketAdapter.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
