@@ -198,6 +198,7 @@ ALTER TABLE "Formacao_Academica" ADD CONSTRAINT "Key16" PRIMARY KEY ("CPF","seq_
 
 CREATE TABLE "Experiencia_Profissional"(
  "CPF" Bigint NOT NULL,
+ "Seq_Experiencia" Integer NOT NULL,
  "Nom_Empresa" Character varying NOT NULL,
  "Cod_Cargo" Integer NOT NULL,
  "Cod_CEP" Bigint,
